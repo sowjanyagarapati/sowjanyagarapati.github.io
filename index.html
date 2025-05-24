@@ -7,44 +7,63 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Hi, I'm Alex Patel</h1>
-      <p>Full-Stack Software Engineer | Vue.js • .NET • Azure</p>
-    </div>
-  </header>
 
-  <section class="projects">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-content">
+      <h1 class="logo">Alex Patel</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I'm a passionate Full-Stack Software Engineer with expertise in building scalable web apps using modern tech like Vue.js, .NET Core, and Azure. I enjoy solving real-world problems and helping businesses grow through code.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
     <div class="container">
       <h2>Projects</h2>
       <div class="project-list">
         <div class="project">
           <h3>TaskPilot</h3>
-          <p>A lightweight Kanban task manager built with Vue.js and .NET Core.</p>
-          <a href="#">View on GitHub</a>
+          <p>A Kanban-style task manager with multi-user support using Vue.js and .NET Core.</p>
+          <a href="#">GitHub Repo</a>
         </div>
         <div class="project">
           <h3>SalesPulse Dashboard</h3>
-          <p>Real-time data dashboard for eCommerce insights using React and Node.js.</p>
+          <p>Real-time eCommerce dashboard built with React and Node.js.</p>
           <a href="#">Live Demo</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="contact">
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
     <div class="container">
-      <h2>Contact</h2>
-      <p>📧 Email: <a href="mailto:alex.patel.dev@gmail.com">alex.patel.dev@gmail.com</a></p>
-      <p>💼 LinkedIn: <a href="https://linkedin.com/in/alexpatel" target="_blank">linkedin.com/in/alexpatel</a></p>
-      <p>🔗 GitHub: <a href="https://github.com/alexpatel" target="_blank">github.com/alexpatel</a></p>
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Frontend: Vue.js, React, HTML/CSS, Tailwind</li>
+        <li>Backend: .NET Core, Node.js, REST APIs</li>
+        <li>Database: PostgreSQL, SQL Server, MongoDB</li>
+        <li>DevOps: Docker, GitHub Actions, Azure</li>
+      </ul>
     </div>
   </section>
 
-  <footer>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
     <div class="container">
-      <p>&copy; 2025 Alex Patel. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
-</html>
+      <h2>Contact</h2>
+      <p>📧 Email: <a href="mailto:alex.patel.dev@gmail.com">alex.patel.dev@gmail.com</a></p>
+      <p>💼 LinkedIn: <a href="https://linkedin.com/in/alexpat
