@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lakshmi Sowjanya Garapati | Software Engineer</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body>
+  <!-- Animated Background Elements -->
+  <div class="tech-circle"></div>
+  <div class="tech-circle"></div>
+  <div class="tech-circle"></div>
 
   <!-- Navbar -->
   <nav class="navbar">
@@ -14,8 +19,14 @@
       <div class="logo">Lakshmi Sowjanya Garapati</div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
@@ -24,7 +35,73 @@
   <section id="about" class="section about">
     <div class="container">
       <h2>About Me</h2>
-      <p>I'm a passionate Full-Stack Software Engineer with a strong focus on building efficient, scalable web applications. I specialize in modern technologies like Vue.js, .NET Core, and Azure, and I love turning ideas into reality through clean code and innovative solutions.</p>
+      <p>I'm a passionate Full-Stack Software Engineer with a strong focus on building efficient, scalable web applications. I specialize in modern technologies like Python, Vue.js, .NET Core, GoLang. I love turning ideas into reality through clean code and innovative solutions.</p>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume" class="section resume">
+    <div class="container">
+      <h2>Resume</h2>
+      <div class="resume-card">
+        <div class="resume-content">
+          <i class="fas fa-file-alt resume-icon"></i>
+          <h3>Lakshmi Sowjanya Garapati</h3>
+          <p>Full-Stack Software Engineer</p>
+          <div class="resume-actions">
+            <a href="https://drive.google.com/file/d/108678V5Jr4tanOBh0NEMUedMPTutIudn/view" target="_blank" class="resume-btn preview-btn">
+              <i class="fas fa-eye"></i>
+              Preview Resume
+            </a>
+            <a href="https://drive.google.com/uc?export=download&id=108678V5Jr4tanOBh0NEMUedMPTutIudn" class="resume-btn download-btn">
+              <i class="fas fa-download"></i>
+              Download Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <div class="skill-level">
+          <h3><i class="fas fa-star"></i> Experienced</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Vue.js</span>
+            <span class="skill-tag">.NET Core</span>
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">CI/CD</span>
+          </div>
+        </div>
+
+        <div class="skill-level">
+          <h3><i class="fas fa-star-half-alt"></i> Intermediate</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">GoLang</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Perl</span>
+          </div>
+        </div>
+
+        <div class="skill-level">
+          <h3><i class="fas fa-star"></i> Relevant</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">GraphQL</span>
+            <span class="skill-tag">Redis</span>
+            <span class="skill-tag">TypeScript</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -33,7 +110,8 @@
     <div class="container">
       <h2>Projects</h2>
       <div class="project-list">
-        <div class="project">
+        <h2>Coming soon</h2>
+        <!-- <div class="project">
           <h3>TaskPilot</h3>
           <p>A comprehensive task management application built with Vue.js and .NET Core. Features include real-time updates, team collaboration, and advanced task filtering.</p>
           <div class="project-tech">
@@ -61,7 +139,7 @@
             <span>Spring Boot</span>
             <span>PostgreSQL</span>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -71,9 +149,24 @@
     <div class="container">
       <h2>Contact</h2>
       <div class="contact-links">
-        <a href="mailto:your.email@example.com">Email</a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="mailto:lakshmisowjanyagarapati@gmail.com" class="social-icon" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://linkedin.com/in/lakshmi-sowjanya-garapati" target="_blank" class="social-icon" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/sowjanyagarapati" target="_blank" class="social-icon" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://instagram.com/hello.techie" target="_blank" class="social-icon" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://x.com/hello_techie" target="_blank" class="social-icon" title="X (Twitter)">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://medium.com/@lakshmisowjanya.garapati" target="_blank" class="social-icon" title="Medium">
+          <i class="fab fa-medium"></i>
+        </a>
       </div>
     </div>
   </section>
@@ -84,5 +177,47 @@
     </div>
   </footer>
 
+  <script>
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const icon = themeToggle.querySelector('i');
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      icon.classList.replace('fa-moon', 'fa-sun');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      
+      // Update icon
+      if (body.classList.contains('dark-mode')) {
+        icon.classList.replace('fa-moon', 'fa-sun');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        icon.classList.replace('fa-sun', 'fa-moon');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+      
+      lastScroll = currentScroll;
+    });
+  </script>
 </body>
 </html>
