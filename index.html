@@ -3,59 +3,377 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lakshmi Sowjanya Garapati | Software Engineer</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Lakshmi Sowjanya Garapati | Full-Stack Software Engineer</title>
+  <meta name="description" content="Portfolio of Lakshmi Sowjanya Garapati, a Full-Stack Software Engineer specializing in Python, Vue.js, GoLang, React, and Cloud infrastructure." />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <!-- Animated Background Elements -->
-  <div class="tech-circle"></div>
-  <div class="tech-circle"></div>
-  <div class="tech-circle"></div>
+<body class="dark-mode">
+  <!-- Glowing Background Orbs -->
+  <div class="tech-glow glow-1"></div>
+  <div class="tech-glow glow-2"></div>
+  <div class="tech-glow glow-3"></div>
 
-  <!-- Navbar -->
-  <nav class="navbar">
+  <!-- Notification Toast -->
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <!-- Header / Navbar -->
+  <header class="navbar" id="navbar">
     <div class="container nav-content">
-      <div class="logo">Lakshmi Sowjanya Garapati</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li>
-          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-            <i class="fas fa-moon"></i>
+      <a href="#hero" class="logo">
+        <span class="logo-text">Sowjanya</span><span class="logo-dot">.dev</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#resume" class="nav-link">Resume</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button id="mobile-menu-btn" class="icon-btn mobile-only" aria-label="Toggle mobile menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="status-badge">
+          <span class="status-pulse"></span>
+          <span>Available for Full-Stack Engineering Roles</span>
+        </div>
+        
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Lakshmi Sowjanya</span>
+        </h1>
+        <h2 class="hero-subtitle">Full-Stack Software Engineer</h2>
+
+        <p class="hero-description">
+          Building scalable distributed backends and high-performance web applications. Specializing in 
+          <span class="highlight-tech">Python</span>, <span class="highlight-tech">Vue.js</span>, 
+          <span class="highlight-tech">GoLang</span>, and <span class="highlight-tech">Cloud Solutions</span>.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-code-branch"></i> Explore Projects
+          </a>
+          <a href="#resume" class="btn btn-secondary">
+            <i class="fas fa-file-pdf"></i> Resume
+          </a>
+          <button class="btn btn-outline" id="copy-email-hero">
+            <i class="fas fa-copy"></i> Copy Email
           </button>
-        </li>
-      </ul>
-    </div>
-  </nav>
+        </div>
 
-  <!-- About -->
-  <section id="about" class="section about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I'm a passionate Full-Stack Software Engineer with a strong focus on building efficient, scalable web applications. I specialize in modern technologies like Python, Vue.js, .NET Core, GoLang. I love turning ideas into reality through clean code and innovative solutions.</p>
+        <div class="social-bar">
+          <a href="mailto:lakshmisowjanyagarapati@gmail.com" class="social-btn" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://github.com/sowjanyagarapati" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/lakshmi-sowjanya-garapati" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://medium.com/@lakshmisowjanyagarapati" target="_blank" rel="noopener noreferrer" class="social-btn" title="Medium">
+            <i class="fab fa-medium-m"></i>
+          </a>
+          <a href="https://x.com/hello_techie" target="_blank" rel="noopener noreferrer" class="social-btn" title="X (Twitter)">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a href="https://instagram.com/hello.techie" target="_blank" rel="noopener noreferrer" class="social-btn" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://buymeacoffee.com/sowjanyagarapati" target="_blank" rel="noopener noreferrer" class="social-btn" title="Buy Me a Coffee">
+            <i class="fas fa-mug-hot"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="code-card">
+          <div class="code-header">
+            <div class="mac-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="code-title">engineer.py</span>
+          </div>
+          <pre class="code-body"><code><span class="code-keyword">class</span> <span class="code-class">FullStackDeveloper</span>:
+    <span class="code-keyword">def</span> <span class="code-func">__init__</span>(self):
+        self.name = <span class="code-string">"Lakshmi Sowjanya Garapati"</span>
+        self.role = <span class="code-string">"Software Engineer"</span>
+        self.tech_stack = [
+            <span class="code-string">"Python"</span>, <span class="code-string">"Vue.js"</span>, <span class="code-string">"React.js"</span>, <span class="code-string">"Go"</span>, 
+            <span class="code-string">"PostgreSQL"</span>, <span class="code-string">"Docker"</span>, <span class="code-string">"AWS"</span>
+        ]
+
+    <span class="code-keyword">def</span> <span class="code-func">build_solution</span>(self, problem):
+        <span class="code-keyword">return</span> {
+            <span class="code-string">"status"</span>: <span class="code-string">"scalable"</span>,
+            <span class="code-string">"quality"</span>: <span class="code-string">"clean_code"</span>,
+            <span class="code-string">"impact"</span>: <span class="code-string">"high"</span>
+        }</code></pre>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Resume -->
-  <section id="resume" class="section resume">
+  <!-- About Section -->
+  <section id="about" class="section about-section">
     <div class="container">
-      <h2>Resume</h2>
-      <div class="resume-card">
-        <div class="resume-content">
-          <i class="fas fa-file-alt resume-icon"></i>
-          <h3>Lakshmi Sowjanya Garapati</h3>
-          <p>Full-Stack Software Engineer</p>
-          <div class="resume-actions">
-            <a href="https://drive.google.com/file/d/1R5CG55n6RmY6c3WP06D4fuYZ9-_4ppMP/view?usp=sharing" target="_blank" class="resume-btn preview-btn">
-              <i class="fas fa-eye"></i>
-              Preview Resume
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Passionate about clean code, scalable architecture & modern web design</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card main-bio">
+          <div class="bio-icon"><i class="fas fa-terminal"></i></div>
+          <h3>Full-Stack Focus</h3>
+          <p>
+            I am a Software Engineer dedicated to crafting end-to-end applications. From designing decoupled microservices 
+            and resilient RESTful/GraphQL APIs to sculpting reactive modern user interfaces, I turn ideas into high-impact digital solutions.
+          </p>
+          <p>
+            Whether working with Python, GoLang on the backend, or powering responsive UIs with Vue.js & React, 
+            I prioritize maintainability, security, and developer experience.
+          </p>
+        </div>
+
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <div class="h-icon"><i class="fas fa-layer-group"></i></div>
+            <div>
+              <h4>Full-Stack Mastery</h4>
+              <p>Comfortable across the entire stack—from database schemas & APIs to client UX.</p>
+            </div>
+          </div>
+
+          <div class="highlight-item">
+            <div class="h-icon"><i class="fas fa-server"></i></div>
+            <div>
+              <h4>Backend Engineering</h4>
+              <p>Experienced in high-concurrency APIs, SQL/NoSQL databases, and microservices.</p>
+            </div>
+          </div>
+
+          <div class="highlight-item">
+            <div class="h-icon"><i class="fas fa-cloud"></i></div>
+            <div>
+              <h4>Cloud & Containerization</h4>
+              <p>Proficient with Docker, CI/CD pipelines, AWS, and Azure cloud environments.</p>
+            </div>
+          </div>
+
+          <div class="highlight-item">
+            <div class="h-icon"><i class="fas fa-code"></i></div>
+            <div>
+              <h4>Clean Code Advocate</h4>
+              <p>Writing well-documented, tested, modular code that scales effortlessly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Technical Expertise</h2>
+        <p class="section-subtitle">Tools, languages, and technologies I use to build systems</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- AI Tools & Engineering -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="fas fa-robot skill-icon"></i>
+            <h3>AI Tools & Engineering</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-chip experienced"><i class="fas fa-terminal"></i> Claude Code</span>
+            <span class="skill-chip experienced"><i class="fas fa-brain"></i> LLM</span>
+            <span class="skill-chip experienced"><i class="fas fa-link"></i> LangChain</span>
+            <span class="skill-chip experienced"><i class="fas fa-search"></i> RAG</span>
+            <span class="skill-chip experienced"><i class="fas fa-user-astronaut"></i> AI Agents</span>
+          </div>
+        </div>
+
+        <!-- Backend & Languages -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="fas fa-code skill-icon"></i>
+            <h3>Languages & Backend</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-chip experienced"><i class="fab fa-python"></i> Python</span>
+            <span class="skill-chip intermediate"><i class="fab fa-golang"></i> GoLang</span>
+            <span class="skill-chip intermediate"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="skill-chip relevant"><i class="fab fa-square-js"></i> TypeScript</span>
+            <span class="skill-chip intermediate"><i class="fas fa-terminal"></i> Perl</span>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="fas fa-laptop-code skill-icon"></i>
+            <h3>Frontend Technologies</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-chip experienced"><i class="fab fa-vuejs"></i> Vue.js</span>
+            <span class="skill-chip intermediate"><i class="fab fa-react"></i> React</span>
+            <span class="skill-chip experienced"><i class="fab fa-html5"></i> HTML5</span>
+            <span class="skill-chip experienced"><i class="fab fa-css3-alt"></i> CSS3 / Modern Web</span>
+            <span class="skill-chip relevant"><i class="fas fa-paint-brush"></i> UI/UX Design</span>
+          </div>
+        </div>
+
+        <!-- Databases & APIs -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="fas fa-database skill-icon"></i>
+            <h3>Databases & Architecture</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-chip experienced"><i class="fas fa-database"></i> SQL / PostgreSQL</span>
+            <span class="skill-chip relevant"><i class="fas fa-bolt"></i> Redis</span>
+            <span class="skill-chip relevant"><i class="fas fa-project-diagram"></i> GraphQL</span>
+            <span class="skill-chip experienced"><i class="fas fa-network-wired"></i> RESTful APIs</span>
+            <span class="skill-chip intermediate"><i class="fas fa-sitemap"></i> Microservices</span>
+          </div>
+        </div>
+
+        <!-- DevOps & Cloud -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="fas fa-cloud-upload-alt skill-icon"></i>
+            <h3>Cloud & DevOps</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-chip experienced"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="skill-chip experienced"><i class="fas fa-infinity"></i> CI/CD Pipelines</span>
+            <span class="skill-chip intermediate"><i class="fab fa-docker"></i> Docker</span>
+            <span class="skill-chip intermediate"><i class="fab fa-aws"></i> AWS</span>
+            <span class="skill-chip relevant"><i class="fab fa-microsoft"></i> Azure</span>
+            <span class="skill-chip relevant"><i class="fab fa-linux"></i> Kubernetes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Projects Showcase</h2>
+        <p class="section-subtitle">Select works and applications currently under active development</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="project-filters">
+        <button class="filter-tab active" data-filter="all">All Projects</button>
+        <button class="filter-tab" data-filter="fullstack">Full-Stack</button>
+        <button class="filter-tab" data-filter="backend">Backend & API</button>
+        <button class="filter-tab" data-filter="frontend">Frontend</button>
+        <button class="filter-tab" data-filter="building">⚡ In Development</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projects-grid">
+        
+        <!-- Featured Project: auth-service -->
+        <article class="project-card" data-category="fullstack backend building">
+          <div class="project-card-header">
+            <span class="project-badge badge-building"><i class="fas fa-bolt"></i> Building</span>
+            <div class="project-actions-top">
+              <span title="In Active Development"><i class="fas fa-shield-alt"></i></span>
+            </div>
+          </div>
+
+          <div class="project-card-body">
+            <h3 class="project-title">auth-service</h3>
+            <p class="project-desc">
+              A scalable, full-stack authentication microservice providing OAuth2 authentication, JWT access/refresh token rotation, secure session management, and a modern React dashboard client interface.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">OAuth2 / JWT</span>
+              <span class="tech-tag">REST API</span>
+            </div>
+          </div>
+
+          <div class="project-card-footer">
+            <span class="project-status-text"><i class="fas fa-spinner fa-spin"></i> Active Project — Publishing Soon</span>
+          </div>
+        </article>
+
+        <!-- Project Slot for Sowjanya's Next Project -->
+        <article class="project-card add-project-card" data-category="building">
+          <div class="add-card-content">
+            <div class="add-icon"><i class="fas fa-plus-circle"></i></div>
+            <h3>More Projects Coming Soon</h3>
+            <p>Currently building new full-stack apps & AI services to publish here!</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="section resume-section">
+    <div class="container">
+      <div class="resume-wrapper">
+        <div class="resume-card-modern">
+          <div class="resume-header">
+            <div class="resume-icon-badge">
+              <i class="fas fa-file-contract"></i>
+            </div>
+            <h3>Lakshmi Sowjanya Garapati</h3>
+            <p class="resume-role">Full-Stack Software Engineer</p>
+          </div>
+
+          <p class="resume-text">
+            Looking for detailed technical experience, backend architectures, and project outcomes? View or download my latest resume below.
+          </p>
+
+          <div class="resume-actions-grid">
+            <a href="https://drive.google.com/file/d/1R5CG55n6RmY6c3WP06D4fuYZ9-_4ppMP/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-glow">
+              <i class="fas fa-eye"></i> Preview Resume
             </a>
-            <a href="https://drive.google.com/file/d/1R5CG55n6RmY6c3WP06D4fuYZ9-_4ppMP/view?usp=sharing" class="resume-btn download-btn">
-              <i class="fas fa-download"></i>
-              Download Resume
+            <a href="https://drive.google.com/file/d/1R5CG55n6RmY6c3WP06D4fuYZ9-_4ppMP/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <i class="fas fa-download"></i> Download PDF
             </a>
           </div>
         </div>
@@ -63,161 +381,196 @@
     </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="section skills">
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
     <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-container">
-        <div class="skill-level">
-          <h3><i class="fas fa-star"></i> Experienced</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Vue.js</span>
-            <span class="skill-tag">.NET Core</span>
-            <span class="skill-tag">C#</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">CI/CD</span>
+      <div class="section-header">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Interested in collaborating or discussing full-stack opportunities?</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-main">
+          <h3>Get In Touch</h3>
+          <p>I'm always open to discussing new projects, software engineering roles, or tech ideas.</p>
+
+          <div class="email-copy-box">
+            <span class="email-address">lakshmisowjanyagarapati@gmail.com</span>
+            <button class="btn btn-primary btn-sm" id="copy-email-contact">
+              <i class="fas fa-copy"></i> Copy Email
+            </button>
           </div>
         </div>
 
-        <div class="skill-level">
-          <h3><i class="fas fa-star-half-alt"></i> Intermediate</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">GoLang</span>
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">AWS</span>
-            <span class="skill-tag">Perl</span>
-          </div>
-        </div>
-
-        <div class="skill-level">
-          <h3><i class="fas fa-star"></i> Relevant</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Azure</span>
-            <span class="skill-tag">GraphQL</span>
-            <span class="skill-tag">Redis</span>
-            <span class="skill-tag">TypeScript</span>
-          </div>
+        <div class="social-grid">
+          <a href="mailto:lakshmisowjanyagarapati@gmail.com" class="social-tile">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+          </a>
+          <a href="https://linkedin.com/in/lakshmi-sowjanya-garapati" target="_blank" rel="noopener noreferrer" class="social-tile">
+            <i class="fab fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/sowjanyagarapati" target="_blank" rel="noopener noreferrer" class="social-tile">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://medium.com/@lakshmisowjanyagarapati" target="_blank" rel="noopener noreferrer" class="social-tile">
+            <i class="fab fa-medium-m"></i>
+            <span>Medium</span>
+          </a>
+          <a href="https://x.com/hello_techie" target="_blank" rel="noopener noreferrer" class="social-tile">
+            <i class="fab fa-x-twitter"></i>
+            <span>X (Twitter)</span>
+          </a>
+          <a href="https://instagram.com/hello.techie" target="_blank" rel="noopener noreferrer" class="social-tile">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+          <a href="https://buymeacoffee.com/sowjanyagarapati" target="_blank" rel="noopener noreferrer" class="social-tile">
+            <i class="fas fa-mug-hot"></i>
+            <span>Coffee</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="section projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-list">
-        <div class="project">
-          <h3>Web Development</h3>
-          <p>A Curated gallery of my fun side web development projects.</p>
-          <div class="project-tech">
-            <span>Vue.js</span>
-            <a href="https://web-development-gallery.netlify.app/">Visit here</a>
-          </div>
-        </div>
-<!---
-        <div class="project">
-          <h3>EcoTrack</h3>
-          <p>An environmental monitoring platform that helps organizations track and reduce their carbon footprint. Includes data visualization and reporting features.</p>
-          <div class="project-tech">
-            <span>React</span>
-            <span>Node.js</span>
-            <span>MongoDB</span>
-          </div>
-        </div>
-
-        <div class="project">
-          <h3>HealthConnect</h3>
-          <p>A healthcare management system that streamlines patient records and appointment scheduling. Implements secure data handling and HIPAA compliance.</p>
-          <div class="project-tech">
-            <span>Angular</span>
-            <span>Spring Boot</span>
-            <span>PostgreSQL</span>
-          </div>
-        </div> -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <div class="contact-links">
-        <a href="mailto:lakshmisowjanyagarapati@gmail.com" class="social-icon" title="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://linkedin.com/in/lakshmi-sowjanya-garapati" target="_blank" class="social-icon" title="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/sowjanyagarapati" target="_blank" class="social-icon" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://instagram.com/hello.techie" target="_blank" class="social-icon" title="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://x.com/hello_techie" target="_blank" class="social-icon" title="X (Twitter)">
-          <i class="fab fa-x-twitter"></i>
-        </a>
-        <a href="https://medium.com/@lakshmisowjanya.garapati" target="_blank" class="social-icon" title="Medium">
-          <i class="fab fa-medium"></i>
-        </a>
-        <a href="https://buymeacoffee.com/sowjanyagarapati" target="_blank" class="social-icon" title="Buy Me a Coffee">
-          <i class="fas fa-mug-hot"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Lakshmi Sowjanya Garapati. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="year"></span> Lakshmi Sowjanya Garapati. Designed & Built with Precision.</p>
+      <a href="#hero" class="back-to-top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+      </a>
     </div>
   </footer>
 
+  <!-- JavaScript Logic -->
   <script>
-    // Theme toggle functionality
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-    const icon = themeToggle.querySelector('i');
+    // Set Current Year in Footer
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Check for saved theme preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      body.classList.add('dark-mode');
-      icon.classList.replace('fa-moon', 'fa-sun');
+    // Copy Email Functionality
+    const EMAIL_ADDRESS = "lakshmisowjanyagarapati@gmail.com";
+    function copyEmailToClipboard() {
+      navigator.clipboard.writeText(EMAIL_ADDRESS).then(() => {
+        showToast("Email address copied to clipboard!");
+      }).catch(err => {
+        showToast("Email: " + EMAIL_ADDRESS);
+      });
     }
 
-    themeToggle.addEventListener('click', () => {
+    document.getElementById('copy-email-hero').addEventListener('click', copyEmailToClipboard);
+    document.getElementById('copy-email-contact').addEventListener('click', copyEmailToClipboard);
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    // Theme Toggle Functionality
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = themeToggleBtn.querySelector('i');
+    const body = document.body;
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      body.classList.remove('dark-mode');
+      themeIcon.className = 'fas fa-moon';
+    } else {
+      body.classList.add('dark-mode');
+      themeIcon.className = 'fas fa-sun';
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
       body.classList.toggle('dark-mode');
-      
-      // Update icon
       if (body.classList.contains('dark-mode')) {
-        icon.classList.replace('fa-moon', 'fa-sun');
+        themeIcon.className = 'fas fa-sun';
         localStorage.setItem('theme', 'dark');
       } else {
-        icon.classList.replace('fa-sun', 'fa-moon');
+        themeIcon.className = 'fas fa-moon';
         localStorage.setItem('theme', 'light');
       }
     });
 
-    // Navbar scroll effect
-    const navbar = document.querySelector('.navbar');
-    let lastScroll = 0;
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+      const icon = mobileMenuBtn.querySelector('i');
+      if (navMenu.classList.contains('open')) {
+        icon.className = 'fas fa-times';
+      } else {
+        icon.className = 'fas fa-bars';
+      }
+    });
+
+    // Close Mobile Menu on Nav Link Click
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+      });
+    });
+
+    // Project Filter Logic
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || (category && category.includes(filter))) {
+            card.style.display = 'flex';
+            setTimeout(() => card.style.opacity = '1', 50);
+          } else {
+            card.style.opacity = '0';
+            setTimeout(() => card.style.display = 'none', 300);
+          }
+        });
+      });
+    });
+
+    // Navbar Scroll & Section Active State
+    const navbar = document.getElementById('navbar');
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
 
     window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-      
-      if (currentScroll > 50) {
+      if (window.scrollY > 40) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
       }
-      
-      lastScroll = currentScroll;
+
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
     });
   </script>
 </body>
