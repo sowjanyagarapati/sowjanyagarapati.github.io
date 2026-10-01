@@ -366,7 +366,6 @@
             <div class="portfolio-thumb">
               <div class="thumb-illustration">
                 <i class="fas fa-shield-alt project-illustration-icon"></i>
-                <span class="project-badge">In Development</span>
               </div>
               <div class="portfolio-overlay">
                 <a href="https://github.com/sowjanyagarapati/auth-service" target="_blank" rel="noopener noreferrer" class="overlay-icon" title="View GitHub Code">
@@ -525,7 +524,28 @@
       </div>
 
       <div class="modal-body">
-        <div class="modal-tabs">
+        <!-- Content for Portfolio's auth-service modal -->
+        <div class="modal-spec-content">
+          <h3>auth-service // Architecture & Security Specs</h3>
+          <p class="modal-spec-desc">An enterprise-grade authentication microservice demonstrating modern full-stack security patterns.</p>
+
+          <div class="spec-pillars">
+            <div class="pillar">
+              <h4><i class="fas fa-sync-alt cyan-icon"></i> Dual-Token Rotation</h4>
+              <p>Short-lived JWT Access Tokens (15 min) paired with long-lived HttpOnly Refresh Cookies (7 days) for seamless background renewal.</p>
+            </div>
+            <div class="pillar">
+              <h4><i class="fab fa-google cyan-icon"></i> Decoupled Google OAuth 2.0</h4>
+              <p>Uses async <code>httpx</code> to exchange Google auth codes, automatically mapping social profiles to native JWTs in PostgreSQL.</p>
+            </div>
+            <div class="pillar">
+              <h4><i class="fas fa-lock cyan-icon"></i> Bcrypt Password Hashing</h4>
+              <p>Salted CPU-hardened password encryption via <code>passlib</code> with zero plain-text credential persistence.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-tabs" style="margin-top: 1.5rem;">
           <button class="modal-tab active" data-tab="arch">System Schema</button>
           <button class="modal-tab" data-tab="api">API Test Bench</button>
           <button class="modal-tab" data-tab="security">Security Protocols</button>

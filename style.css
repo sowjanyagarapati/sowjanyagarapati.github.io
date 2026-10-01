@@ -1349,6 +1349,64 @@ p {
 
 .sec-list i { color: var(--cyan-primary); margin-right: 0.5rem; }
 
+/* Modal Spec Pillars Styling */
+.modal-spec-content {
+  margin-bottom: 1.5rem;
+}
+
+.modal-spec-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+  color: var(--text-primary);
+}
+
+.modal-spec-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+
+.spec-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.pillar {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  transition: var(--transition);
+}
+
+.pillar:hover {
+  border-color: var(--cyan-primary);
+  transform: translateY(-2px);
+}
+
+.pillar h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pillar p {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.pillar code {
+  background: rgba(0, 210, 223, 0.1);
+  color: var(--cyan-primary);
+  padding: 1px 4px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+}
+
 /* FOOTER */
 .lendex-footer {
   border-top: 1px solid var(--border-color);
